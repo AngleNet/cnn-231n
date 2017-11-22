@@ -20,6 +20,9 @@ def load_CIFAR_batch(filename):
     datadict = load_pickle(f)
     X = datadict['data']
     Y = datadict['labels']
+    # The original format is 10000 * 3072. The first 32*32 entries contain
+    # the red channel values, the next 32*32 the green, and the final 32*32
+    # the blue
     X = X.reshape(10000, 3, 32, 32).transpose(0,2,3,1).astype("float")
     Y = np.array(Y)
     return X, Y
