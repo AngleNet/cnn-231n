@@ -4,23 +4,31 @@
 * Install virtual env:
     ```bash
     cd assignment1
-    sudo pip install virtualenv      # This may already be installed
-    virtualenv -p python3 .env       # Create a virtual environment (python3)
-    # Note: you can also use "virtualenv .env" to use your default python (usually python 2.7)
-    source .env/bin/activate         # Activate the virtual environment
-    pip install -r requirements.txt  # Install dependencies
-    # Work on the assignment for a while ...
-    deactivate                       # Exit the virtual environment
+    bash setup_googlecloud.sh       # Setup python3 
+    source .env/bin/activate        
+    deactivate                      # Exit virtualenv
     ```
-    Or just `cd assignmentx && bash setup_googlecloud.sh` to setup all things including jupyter. If your default `python` is installed via `conda`. Then replace the `pip install virtualenv` with the `conda install virtualenv`
 * Download data
     ```bash
     cd assignmentx/cs231n/datasets
     ./get_dataset.sh
     ```
-* Start IPython
+* Start Jupyter 
     ```bash
-    jupyter notebook
+    cd assignment1 && source .env/bin/activate
+    touch jupyter_notebook_config.py    
+    # Add the following to it:
+
+    # The IP address the notebook server will listen on.
+    c.NotebookApp.ip = '221.207.30.251'  
+    # Hashed password to use for web authentication.                                                                                  
+    # To generate, type in a python/IPython shell:
+    #   from notebook.auth import passwd; passwd()
+    # The string should be of the form type:salt:hashed-password.
+    c.NotebookApp.password = ''
+    c.NotebookApp.open_browser = False
+
+    jupyter notebook            # Start Jupyter from the same directory
     ```
 * Change `pip` repository
     ```
@@ -43,6 +51,13 @@
     source deactivate
     conda remove -n yourenvname -all
     conda install -n yourenvname --file requirements.txt
+    ```
+* `pip` utilities
+    ```
+    pip3 install --upgrade pip
+    pip3 install {package name}
+    pip3 install pip-autoremove
+    pip-autoremove {package name}   # Delete the package and all its dependencies
     ```
 
 # Git

@@ -1,3 +1,7 @@
 *.swp
 *.pyc
 .env/*
+# Jupyter config file
+jupyter_notebook_config.py
+# Jupyter checkpoints directory
+.ipynb_checkpoints
