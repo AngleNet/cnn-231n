@@ -18,6 +18,7 @@ sudo pip3 install virtualenv
 virtualenv --python=python3 .env                  # Create a virtual environment
 source .env/bin/activate         # Activate the virtual environment
 pip install -r requirements.txt  # Install dependencies
+pip install --upgrade jupyterthemes # Cooler jupyter
 deactivate
 echo "**************************************************"
 echo "*****  End of Google Cloud Set-up Script  ********"

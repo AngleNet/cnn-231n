@@ -57,7 +57,13 @@
     pip3 install --upgrade pip
     pip3 install {package name}
     pip3 install pip-autoremove
-    pip-autoremove {package name}   # Delete the package and all its dependencies
+    pip-autoremove {package name} -y  # Delete the package and all its dependencies
+    ```
+
+* **jupyter themes**
+    ```
+    pip install --upgrade jupyterthemes
+    jt -t chesterish -T -N -dfonts -altout -nf 8 -lineh 130
     ```
 
 # Git

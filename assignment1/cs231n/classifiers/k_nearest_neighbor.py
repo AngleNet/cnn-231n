@@ -126,7 +126,7 @@ class KNearestNeighbor(object):
     product = X.dot(self.X_train.T)
     sum_test = np.square(X).sum(axis=1)
     sum_train = np.square(self.X_train).sum(axis=1)
-    dists = np.sqrt(np.matrix(sum_test).T + sum_train - 2*product)
+    dists = np.array(np.sqrt(np.matrix(sum_test).T + sum_train - 2*product))
     #########################################################################
     #                         END OF YOUR CODE                              #
     #########################################################################
