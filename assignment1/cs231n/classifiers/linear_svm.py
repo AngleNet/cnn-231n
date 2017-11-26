@@ -92,7 +92,7 @@ def svm_loss_vectorized(W, X, y, reg):
   # Hint: Instead of computing the gradient from scratch, it may be easier    #
   # to reuse some of the intermediate values that you used to compute the     #
   # loss.                                                                     #
-  for i xrange(num_train):
+  for i in xrange(num_train):
     dW[:, np.where(margin[i, :] > 0)] += X[i, :]
   #############################################################################
   dW += 2*reg*W
