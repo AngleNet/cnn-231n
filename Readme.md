@@ -20,7 +20,7 @@
     # Add the following to it:
 
     # The IP address the notebook server will listen on.
-    c.NotebookApp.ip = '221.207.30.251'  
+    c.NotebookApp.ip = ''  
     # Hashed password to use for web authentication.                                                                                  
     # To generate, type in a python/IPython shell:
     #   from notebook.auth import passwd; passwd()
@@ -66,9 +66,22 @@
     jt -t chesterish -T -N -dfonts -altout -nf 8 -lineh 130
     ```
 
+* Debug jupyter
+    ```
+    import IPython.core.debugger as debugger
+    def func():
+        for i in range(3):
+            debugger.set_trace()
+    func() # Now we can step into func
+    ```
+
 # Git
 
     # Always edit the most recent commit
     git commit --amend 
     # The remote may reject this commit
     git push --force 
+    # Generate patch from the changed file
+    git diff knn.ipynb > knn.patch
+    # Patch
+    git apply knn.patch
