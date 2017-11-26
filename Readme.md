@@ -85,3 +85,8 @@
     git diff knn.ipynb > knn.patch
     # Patch
     git apply knn.patch
+    # Combine multiple commits
+    git rebase -i COMMIT_ID
+
+# Useful links
+* [Latex symbols](https://www.sharelatex.com/learn)
