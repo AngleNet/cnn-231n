@@ -87,6 +87,10 @@
     git apply knn.patch
     # Combine multiple commits
     git rebase -i COMMIT_ID
+    # Configuration
+    git config --global core.editor vim
+    git config --global user.name {name}
+    git config --global user.email {email}
 
 # Useful links
 * [Latex symbols](https://www.sharelatex.com/learn)
