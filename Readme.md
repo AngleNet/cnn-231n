@@ -37,6 +37,7 @@
     index-url = http://mirrors.aliyun.com/pypi/simple/
     [install]
     trusted-host = mirrors.aliyun.com
+    # For windows, create %APPDATA%/pip/pip.ini
     ```
 * Change `conda` repository
     ```
@@ -58,6 +59,8 @@
     pip3 install {package name}
     pip3 install pip-autoremove
     pip-autoremove {package name} -y  # Delete the package and all its dependencies
+    pip3 freeze > reqirements.txt # Save current env to requirements.txt
+    pipreqs /path/to/project # Another way to save project dependencies
     ```
 
 * **jupyter themes**
@@ -91,6 +94,19 @@
     git config --global core.editor vim
     git config --global user.name {name}
     git config --global user.email {email}
+    # Untrack file
+    git rm --cache {file name}
+
+# Caffe
+
+# Torch
 
 # Useful links
-* [Latex symbols](https://www.sharelatex.com/learn)
+* [Latex symbols](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+* [Course website](http://cs231n.stanford.edu/)
+* [Large scale visual recognition challenges](http://image-net.org/challenges/LSVRC/)
+* [PPE reading list](https://www.balliol.ox.ac.uk/admissions/undergraduate-admissions/philosophy-politics-and-economics-reading-list)
+* [How the backpropagation works](http://neuralnetworksanddeeplearning.com/chap2.html)
+* [Understanding convolutional neural networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)
+
+* Reading Ch2, Colabs, Caffe

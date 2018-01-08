@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from past.builtins import xrange
 
+import softmax
+
 class TwoLayerNet(object):
   """
   A two-layer fully-connected neural network. The net has an input dimension of
@@ -76,7 +78,6 @@ class TwoLayerNet(object):
     # Store the result in the scores variable, which should be an array of      #
     # shape (N, C).                                                             #
     #############################################################################
-    pass
     #############################################################################
     #                              END OF YOUR CODE                             #
     #############################################################################
@@ -93,7 +94,8 @@ class TwoLayerNet(object):
     # in the variable loss, which should be a scalar. Use the Softmax           #
     # classifier loss.                                                          #
     #############################################################################
-    pass
+
+
     #############################################################################
     #                              END OF YOUR CODE                             #
     #############################################################################
